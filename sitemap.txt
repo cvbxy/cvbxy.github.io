@@ -1,15 +1,10 @@
 https://cvbxy.github.io/2024/06/19/FIC/
-https://cvbxy.github.io/2023/07/23/Daily/
-https://cvbxy.github.io/2023/07/22/TryHackMe-Skynet/
 https://cvbxy.github.io/2023/06/20/github-hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/
 https://cvbxy.github.io/about/index.html
 https://cvbxy.github.io/
 https://cvbxy.github.io/tags/%E5%8F%96%E8%AF%81/
 https://cvbxy.github.io/tags/FIC/
-https://cvbxy.github.io/tags/TryHackMe/
-https://cvbxy.github.io/tags/%E9%9D%B6%E6%9C%BA/
 https://cvbxy.github.io/tags/Hexo/
 https://cvbxy.github.io/tags/Fluid/
 https://cvbxy.github.io/categories/%E5%8F%96%E8%AF%81/
-https://cvbxy.github.io/categories/TryHackMe/
 https://cvbxy.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/

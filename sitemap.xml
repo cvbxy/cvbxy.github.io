@@ -56,6 +56,20 @@
 
   
   <url>
+    <loc>https://cvbxy.github.io/tags/%E5%8F%96%E8%AF%81/</loc>
+    <lastmod>2024-06-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cvbxy.github.io/tags/FIC/</loc>
+    <lastmod>2024-06-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://cvbxy.github.io/tags/TryHackMe/</loc>
     <lastmod>2024-06-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -83,14 +97,14 @@
     <priority>0.2</priority>
   </url>
   
+
+  
   <url>
-    <loc>https://cvbxy.github.io/tags/%E5%8F%96%E8%AF%81/</loc>
+    <loc>https://cvbxy.github.io/categories/%E5%8F%96%E8%AF%81/</loc>
     <lastmod>2024-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
-  
-
   
   <url>
     <loc>https://cvbxy.github.io/categories/TryHackMe/</loc>
@@ -101,13 +115,6 @@
   
   <url>
     <loc>https://cvbxy.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2024-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cvbxy.github.io/categories/%E5%8F%96%E8%AF%81/</loc>
     <lastmod>2024-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

@@ -5,11 +5,11 @@ https://cvbxy.github.io/categories/index.html
 https://cvbxy.github.io/tags/index.html
 https://cvbxy.github.io/about/index.html
 https://cvbxy.github.io/
+https://cvbxy.github.io/tags/%E6%B8%97%E9%80%8F/
+https://cvbxy.github.io/tags/%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C/
 https://cvbxy.github.io/tags/%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90/
 https://cvbxy.github.io/tags/%E5%8F%96%E8%AF%81/
 https://cvbxy.github.io/tags/FIC/
-https://cvbxy.github.io/tags/%E6%B8%97%E9%80%8F/
-https://cvbxy.github.io/tags/%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C/
+https://cvbxy.github.io/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/
 https://cvbxy.github.io/categories/CTF/
 https://cvbxy.github.io/categories/%E5%8F%96%E8%AF%81/
-https://cvbxy.github.io/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/

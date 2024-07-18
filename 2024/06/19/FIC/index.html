@@ -34,8 +34,8 @@
     
     <script class="keep-theme-configurations">
     const KEEP = window.KEEP || {}
-    KEEP.hexo_config = {"hostname":"cvbxy.github.io","root":"/","language":"zh-CN","path":"search.xml"}
-    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"cvbxy","author":"cvbxy","avatar":"/images/avatar.png","logo":"/images/logo.png","favicon":"/images/logo.png"},"menu":{"home":"/","archives":"/archives","tags":"/tags","categories":"/categories","about":"/about"},"first_screen":{"enable":false,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"Keep writing and Keep loving.","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":true,"tag":true,"post_datetime":"created"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null,"icon":null}},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"default"},"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"local_search":{"enable":false,"preload":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.36"},"waline":{"server_url":null,"reaction":false,"version":"3.2.1"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2023,"word_count":true,"site_deploy":{"enable":false,"provider":"github","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","source_data":{},"version":"4.2.0"}
+    KEEP.hexo_config = {"hostname":"cvbxy.github.io","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"cvbxy","author":"cvbxy","avatar":"/images/avatar.png","logo":"/images/logo.png","favicon":"/images/logo.png"},"menu":{"home":"/","archives":"/archives","tags":"/tags","categories":"/categories","about":"/about"},"first_screen":{"enable":false,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"Keep writing and Keep loving.","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":true,"percent":false,"hide_header":true},"home":{"announcement":null,"category":true,"tag":true,"post_datetime":"created"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null,"icon":null}},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"default"},"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"local_search":{"enable":true,"preload":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.36"},"waline":{"server_url":null,"reaction":false,"version":"3.2.1"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2023,"word_count":true,"site_deploy":{"enable":false,"provider":"github","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","source_data":{},"version":"4.1.2"}
     KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
     KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
     KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
@@ -46,6 +46,8 @@
 
 <body>
 <div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
     
 
     
@@ -64,7 +66,7 @@
 <header class="header-wrapper">
 
     <div class="border-box header-content">
-        <div class="left flex-start border-box">
+        <div class="left border-box">
             
                 <a class="logo-image border-box" href="/">
                     <img src="/images/logo.png">
@@ -76,63 +78,69 @@
         </div>
 
         <div class="right border-box">
-            <div class="pc border-box">
-                <ul class="menu-list border-box">
+            <div class="pc">
+                <ul class="menu-list">
                     
                         
-                        <li class="menu-item flex-start border-box">
-                            <a class="menu-text-color border-box" href="/">
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
                                 
                                 首页
-                                
                             </a>
-                            
                         </li>
                     
                         
-                        <li class="menu-item flex-start border-box">
-                            <a class="menu-text-color border-box" href="/archives">
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
                                 
                                 归档
-                                
                             </a>
-                            
                         </li>
                     
                         
-                        <li class="menu-item flex-start border-box">
-                            <a class="menu-text-color border-box" href="/tags">
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
                                 
                                 标签
-                                
                             </a>
-                            
                         </li>
                     
                         
-                        <li class="menu-item flex-start border-box">
-                            <a class="menu-text-color border-box" href="/categories">
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
                                 
                                 分类
-                                
                             </a>
-                            
                         </li>
                     
                         
-                        <li class="menu-item flex-start border-box">
-                            <a class="menu-text-color border-box" href="/about">
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
                                 
                                 关于
-                                
                             </a>
-                            
                         </li>
                     
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas search fa-search"></i>
+                        </li>
                     
                 </ul>
             </div>
-            <div class="mobile border-box flex-start">
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
                 
                 <div class="icon-item menu-bar">
                     <div class="menu-bar-middle"></div>
@@ -142,66 +150,41 @@
     </div>
 
     <div class="header-drawer">
-        <ul class="drawer-menu-list border-box">
+        <ul class="drawer-menu-list">
             
                 
-                <li class="drawer-menu-item border-box not-sub-menu">
-                    <label class="drawer-menu-label border-box">
-                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
-                            
-                            首页
-                        </a>
-                        
-                    </label>
-                    
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >首页</a>
                 </li>
             
                 
-                <li class="drawer-menu-item border-box not-sub-menu">
-                    <label class="drawer-menu-label border-box">
-                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/archives">
-                            
-                            归档
-                        </a>
-                        
-                    </label>
-                    
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >归档</a>
                 </li>
             
                 
-                <li class="drawer-menu-item border-box not-sub-menu">
-                    <label class="drawer-menu-label border-box">
-                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/tags">
-                            
-                            标签
-                        </a>
-                        
-                    </label>
-                    
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags"
+                    >标签</a>
                 </li>
             
                 
-                <li class="drawer-menu-item border-box not-sub-menu">
-                    <label class="drawer-menu-label border-box">
-                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/categories">
-                            
-                            分类
-                        </a>
-                        
-                    </label>
-                    
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >分类</a>
                 </li>
             
                 
-                <li class="drawer-menu-item border-box not-sub-menu">
-                    <label class="drawer-menu-label border-box">
-                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/about">
-                            
-                            关于
-                        </a>
-                        
-                    </label>
-                    
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about"
+                    >关于</a>
                 </li>
             
         </ul>
@@ -304,11 +287,10 @@
                     </div>
                 
 
-                <div class="post-content keep-markdown-body ">
+                <div class="post-content keep-markdown-body">
                     
 
-                    
-                         <p>案情简介：<br>2024年4月，卢某报案至警方，声称自己疑似遭受了“杀猪盘”诈骗，大量钱财被骗走。卢某透露，在与某公司交流过程中结识了员工李某。李某私下诱导卢某参与赌博游戏，起初资金出入均属正常。但随后，李某称赌博平台为提升安全性，更换了地址和玩法，转为通过群聊抢红包形式进行赌博。随着赌资不断增加，卢某投入巨额资金后，发现无法再访问该网站，同时李某也失去联系，卢某遂意识到自己被骗。在经济压力下，卢某选择报警，并承认参与赌博活动，愿意承担相应法律后果。警方依据卢某提供的线索和手机数据，迅速锁定犯罪团伙，并在一藏匿地点成功抓获犯罪嫌疑人李某和赵某。警方对嫌疑人持有的物品进行了证据固定：李某手机被标记为检材1，窝点内服务器为检材2，赵某使用的计算机为检材3。<br>接下来，请取证工作者根据案情和这些检材进行深入分析，并解答后续问题。</p>
+                    <p>案情简介：<br>2024年4月，卢某报案至警方，声称自己疑似遭受了“杀猪盘”诈骗，大量钱财被骗走。卢某透露，在与某公司交流过程中结识了员工李某。李某私下诱导卢某参与赌博游戏，起初资金出入均属正常。但随后，李某称赌博平台为提升安全性，更换了地址和玩法，转为通过群聊抢红包形式进行赌博。随着赌资不断增加，卢某投入巨额资金后，发现无法再访问该网站，同时李某也失去联系，卢某遂意识到自己被骗。在经济压力下，卢某选择报警，并承认参与赌博活动，愿意承担相应法律后果。警方依据卢某提供的线索和手机数据，迅速锁定犯罪团伙，并在一藏匿地点成功抓获犯罪嫌疑人李某和赵某。警方对嫌疑人持有的物品进行了证据固定：李某手机被标记为检材1，窝点内服务器为检材2，赵某使用的计算机为检材3。<br>接下来，请取证工作者根据案情和这些检材进行深入分析，并解答后续问题。</p>
 <h1 id="手机部分"><a href="#手机部分" class="headerlink" title="手机部分"></a>手机部分</h1><blockquote>
 <p>嫌疑人李某的手机型号是？<br>A. Xiaomi MI 2s<br>B. Xiaomi MI 4<br>C. Xiaomi MI 6<br>D. Xiaomi MI 8</p>
 <p>B</p>
@@ -650,7 +632,7 @@
 </blockquote>
 <p>见上题</p>
 <blockquote>
-<p>rocketchat服务器中，聊天服务的管理员的邮箱是？【答题格式：<a class="link"   href="mailto:&#97;&#98;&#x63;&#64;&#x61;&#98;&#x63;&#x2e;&#99;&#x6f;&#109;" >&#97;&#98;&#x63;&#64;&#x61;&#98;&#x63;&#x2e;&#99;&#x6f;&#109;<i class="fas fa-external-link-alt"></i></a>】<br><a class="link"   href="mailto:&#97;&#x64;&#x6d;&#105;&#x6e;&#64;&#x61;&#x64;&#109;&#x69;&#110;&#46;&#99;&#x6f;&#x6d;" >&#97;&#x64;&#x6d;&#105;&#x6e;&#64;&#x61;&#x64;&#109;&#x69;&#110;&#46;&#99;&#x6f;&#x6d;<i class="fas fa-external-link-alt"></i></a></p>
+<p>rocketchat服务器中，聊天服务的管理员的邮箱是？【答题格式：<a class="link"   href="mailto:&#x61;&#98;&#99;&#x40;&#97;&#x62;&#99;&#46;&#x63;&#111;&#x6d;" >&#x61;&#98;&#99;&#x40;&#97;&#x62;&#99;&#46;&#x63;&#111;&#x6d;<i class="fas fa-external-link-alt"></i></a>】<br><a class="link"   href="mailto:&#97;&#x64;&#109;&#105;&#110;&#64;&#97;&#x64;&#x6d;&#105;&#x6e;&#46;&#99;&#111;&#109;" >&#97;&#x64;&#109;&#105;&#110;&#64;&#97;&#x64;&#x6d;&#105;&#x6e;&#46;&#99;&#111;&#109;<i class="fas fa-external-link-alt"></i></a></p>
 </blockquote>
 <p><img   src="/images/blogimg/20240619094003424.png" ></p>
 <blockquote>
@@ -700,7 +682,7 @@
 </blockquote>
 <p>见上题，UTC+8</p>
 <blockquote>
-<p>请综合分析，警方未抓获的重要嫌疑人，其使用聊天平台时注册邮箱号为？【答题格式：<a class="link"   href="mailto:&#x61;&#98;&#x63;&#x40;&#x61;&#97;&#46;&#99;&#x6f;&#x6d;" >&#x61;&#98;&#x63;&#x40;&#x61;&#97;&#46;&#99;&#x6f;&#x6d;<i class="fas fa-external-link-alt"></i></a>】<br><a class="link"   href="mailto:&#108;&#x61;&#111;&#x40;&#x73;&#117;&#46;&#99;&#111;&#109;" >&#108;&#x61;&#111;&#x40;&#x73;&#117;&#46;&#99;&#111;&#109;<i class="fas fa-external-link-alt"></i></a></p>
+<p>请综合分析，警方未抓获的重要嫌疑人，其使用聊天平台时注册邮箱号为？【答题格式：<a class="link"   href="mailto:&#x61;&#x62;&#x63;&#x40;&#x61;&#x61;&#x2e;&#99;&#x6f;&#x6d;" >&#x61;&#x62;&#x63;&#x40;&#x61;&#x61;&#x2e;&#99;&#x6f;&#x6d;<i class="fas fa-external-link-alt"></i></a>】<br><a class="link"   href="mailto:&#x6c;&#x61;&#111;&#x40;&#x73;&#x75;&#x2e;&#x63;&#x6f;&#x6d;" >&#x6c;&#x61;&#111;&#x40;&#x73;&#x75;&#x2e;&#x63;&#x6f;&#x6d;<i class="fas fa-external-link-alt"></i></a></p>
 </blockquote>
 <p>老苏的邮箱</p>
 <p><img   src="/images/blogimg/20240619094007485.png" ></p>
@@ -863,9 +845,7 @@
 </blockquote>
 <p><img   src="/images/blogimg/20240619094019679.png" ></p>
 
-                    
                 </div>
-
                 
 
                 <div class="post-bottom-tags-and-share border-box">
@@ -930,6 +910,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
+        <!-- use hexo-blog-encrypt -->
         <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%89%8B%E6%9C%BA%E9%83%A8%E5%88%86"><span class="nav-text">手机部分</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9B%86%E7%BE%A4%E9%A2%98"><span class="nav-text">服务器集群题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#windows%E9%95%9C%E5%83%8F"><span class="nav-text">windows镜像</span></a></li></ol>
     </div>
 </div>
@@ -960,7 +941,13 @@
 
     
 
-    
+    <div class="count-info info-item">
+        
+
+        
+
+        
+    </div>
 
     
 </footer>
@@ -972,10 +959,7 @@
     
         <div class="post-tools right-toc">
             <div class="post-tools-container border-box">
-    <ul class="post-tools-list border-box">
-        <!-- PC encrypt again -->
-        
-
+    <ul class="tools-list border-box">
         <!-- PC TOC show toggle -->
         
             <li class="tools-item flex-center toggle-show-toc">
@@ -1008,17 +992,13 @@
             <i class="fas fa-search-minus"></i>
         </li>
 
-        <!-- toggle mode -->
-        
-            <li class="tools-item tool-toggle-theme-mode flex-center">
-                <i class="fas fa-moon"></i>
-            </li>
-        
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
 
         <!-- rss -->
         
 
-        <!-- to bottom -->
         <li class="tools-item tool-scroll-to-bottom flex-center">
             <i class="fas fa-arrow-down"></i>
         </li>
@@ -1054,6 +1034,35 @@
 
     <!-- local search -->
     
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
 
     <!-- tablet toc -->
     
@@ -1061,6 +1070,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
+        <!-- use hexo-blog-encrypt -->
         <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%89%8B%E6%9C%BA%E9%83%A8%E5%88%86"><span class="nav-text">手机部分</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9B%86%E7%BE%A4%E9%A2%98"><span class="nav-text">服务器集群题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#windows%E9%95%9C%E5%83%8F"><span class="nav-text">windows镜像</span></a></li></ol>
     </div>
 </div>
@@ -1072,9 +1082,7 @@
 
 
 
-
-
-<!-- common js -->
+<!-- common -->
 
 <script src="/js/utils.js"></script>
 
@@ -1091,17 +1099,17 @@
 <script src="/js/libs/anime.min.js"></script>
 
 
-<!-- local search -->
+<!-- local-search -->
+
+    
+<script src="/js/local-search.js"></script>
+
 
 
 <!-- lazyload -->
 
 
 <div class="">
-    <!-- home page -->
-    
-
-    <!-- post page -->
     
         <!-- post-helper -->
         

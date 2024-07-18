@@ -74,20 +74,6 @@
 
   
   <url>
-    <loc>https://cvbxy.github.io/tags/HackMyVm/</loc>
-    <lastmod>2024-07-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cvbxy.github.io/tags/%E9%9D%B6%E6%9C%BA/</loc>
-    <lastmod>2024-07-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://cvbxy.github.io/tags/%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90/</loc>
     <lastmod>2024-07-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -102,7 +88,14 @@
   </url>
   
   <url>
-    <loc>https://cvbxy.github.io/tags/FIC/</loc>
+    <loc>https://cvbxy.github.io/tags/HackMyVm/</loc>
+    <lastmod>2024-07-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cvbxy.github.io/tags/%E9%9D%B6%E6%9C%BA/</loc>
     <lastmod>2024-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -122,17 +115,24 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://cvbxy.github.io/tags/FIC/</loc>
+    <lastmod>2024-07-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
-    <loc>https://cvbxy.github.io/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/</loc>
+    <loc>https://cvbxy.github.io/categories/CTF/</loc>
     <lastmod>2024-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://cvbxy.github.io/categories/CTF/</loc>
+    <loc>https://cvbxy.github.io/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2024-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
